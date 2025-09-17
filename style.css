@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #262626;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #262626;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: #E15FB6;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+    @media(max-width: 768px){
+        .hamburguer{
+            display: block;
+        }
+
+        .hamburguer.active .bar:nth-child(2){
+            opacity: 0;
+    }
+        .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);        
+}
+
+    .nav-menu{
+        position:fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+}
+
+.h1{
+    text-align: center;
+    color: white;
+}
+.texto{
+    color: white;
+    margin-left: 20px;
+    margin-right: 20PX;
+    font-size: larger;
+}
+
+.personagens {
+    display: grid;            
+    gap: 20px;                 
+    justify-content: center;   
+    margin-top: 50px;
+    color: white
+  }
+  
+  .personagem {
+    text-align: center;        
+  }
+  
+  .personagem img {
+    width: 100px;              
+    height: 100px;
+    border-radius: 50%;     
+    border: 3px solid #000;    
+    object-fit: cover;         
+    cursor: pointer;           
+    transition: transform 0.3s;
+  }
+  
+  .personagem img:hover {
+    transform: scale(1.1);     
+  }
+
+  .dois{
+    text-align: center;
+    color: white;
+}
+
+.footer {      
+    color: #fff;                  
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
